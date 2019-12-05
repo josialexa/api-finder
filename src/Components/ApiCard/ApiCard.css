@@ -1,0 +1,18 @@
+.api-card {
+    background-color: white;
+    padding: 7px;
+    height: 15%;
+    width: 10%;
+    margin: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.api-description {
+    font-size: 12px;
+}

@@ -1,0 +1,16 @@
+#home {
+    width: 100%;
+    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    margin-top: 12vh;
+}
+
+#home div {
+    width: 50%;
+    background-color: white;
+    padding: 5%;
+}

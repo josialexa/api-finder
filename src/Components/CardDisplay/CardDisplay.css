@@ -1,0 +1,11 @@
+#card-display {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    margin-top: 12vh;
+    background-color: rgb(60, 60, 60);
+    height: 88vh;
+    width: 100%;
+}
