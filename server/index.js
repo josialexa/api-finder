@@ -1,14 +1,15 @@
 const express = require('express');
+const apis = require('./controllers/ApiController/ApiController.js');
 const app = express();
 
 app.use(express.json());
 
-// app.get('/', (req, res) => {
-//     res.render('../public/public/index.html')
-// })
+app.get('/api/apis', apis.read);
+app.get('/api/apis/:id', apis.read);
+app.post('/api/apis', apis.create);
+app.put('/api/apis/:id', apis.update);
+app.delete('/api/apis/:id', apis.delete);
 
-app.get('/hey', (req, res) => res.send('ho'))
-
-app.listen(4000, () => {
-    console.log('Listening on port 4000');
+app.listen(5000, () => {
+    console.log('Listening on port 5000');
 })
