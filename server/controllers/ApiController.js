@@ -1,4 +1,4 @@
-let apis = require('../../../apis.json').entries;
+let apis = require('../../apis.json').entries;
 let idTracker = apis.reduce((t, v) => {
     t < +v.id ? +v.id : t;
 }, 0) + 1;

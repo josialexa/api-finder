@@ -1,5 +1,5 @@
 const express = require('express');
-const apis = require('./controllers/ApiController/ApiController.js');
+const apis = require('./controllers/ApiController.js');
 const app = express();
 
 app.use(express.json());
