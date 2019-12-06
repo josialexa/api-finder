@@ -10,7 +10,6 @@ class App extends Component {
     super()
 
     this.state = {
-      selectedApi: {},
       home: <Home />,
       categories: <CardDisplay apiFlag={false} setDisplay={this.setDisplay} />,
       search: <CardDisplay apiFlag={true} setDisplay={this.setDisplay} />,

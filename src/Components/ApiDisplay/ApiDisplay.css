@@ -3,6 +3,7 @@
     height: 100%;
     width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -10,8 +11,8 @@
 .api-display {
     background-color: white;
     padding: 15px;
-    width: 50%;
-    height: 50%;
+    width: 40%;
+    height: 40%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,7 +21,7 @@
 
 .api-display > div {
     margin-bottom: 20px;
-    width: 60%;
+    width: 70%;
     display: flex;
     justify-content: center;
 }

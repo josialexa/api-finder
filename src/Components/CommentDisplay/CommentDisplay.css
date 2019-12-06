@@ -1,0 +1,39 @@
+#comments {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+#comments > div {
+    width: 100%;
+}
+
+#new-comment {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid lightgray;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+input {
+    border: none;
+    text-decoration: none;
+    width: 85%;
+    font-size: 12px;
+}
+
+button {
+    width: 9%;
+    font-family: inherit;
+    border: none;
+    background-color: inherit;
+    color: rgb(100, 180, 220);
+    font-size: 16px;
+    font-weight: bold;
+}

@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import CommentDisplay from '../CommentDisplay/CommentDisplay.js'
 import './ApiDisplay.css'
 
 export default class ApiDisplay extends Component {
@@ -9,7 +10,7 @@ export default class ApiDisplay extends Component {
     }
 
     render() {
-        console.log(this.props)
+        // console.log(this.props)
         return (
             <section className='api-display-container'>
                 <div className='api-display'>
@@ -34,6 +35,7 @@ export default class ApiDisplay extends Component {
                         </div>
                     </div>
 
+                    <CommentDisplay apiID={this.props.api.id} />
                 </div>
             </section>
         )
