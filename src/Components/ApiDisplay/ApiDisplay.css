@@ -1,0 +1,44 @@
+.api-display-container {
+    margin-top: 12vh;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.api-display {
+    background-color: white;
+    padding: 15px;
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.api-display > div {
+    margin-bottom: 20px;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+}
+
+.security-options {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.security-options > div {
+    display: flex;
+    justify-content: space-between;
+    width: 40%
+}
+
+.bold {
+    font-weight: 600;
+}
