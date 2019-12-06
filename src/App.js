@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Header from './Components/Header/Header.js'
 import Home from './Components/Home/Home.js'
 import CardDisplay from './Components/CardDisplay/CardDisplay.js'
+import ApiDisplay from './Components/ApiDisplay/ApiDisplay.js'
 import './App.css';
 
 class App extends Component {
@@ -9,14 +10,18 @@ class App extends Component {
     super()
 
     this.state = {
+      selectedApi: {},
       home: <Home />,
       categories: <CardDisplay apiFlag={false} setDisplay={this.setDisplay} />,
-      search: <CardDisplay apiFlag={true} />,
+      search: <CardDisplay apiFlag={true} setDisplay={this.setDisplay} />,
+      info: <ApiDisplay api={{}}/>,
       dispChoice: 'home'
     }
   }
 
-  setDisplay = (dispChoice) => {
+  setDisplay = (dispChoice, api=null) => {
+    if(api) this.setState({info: <ApiDisplay api={api} />})
+    
     this.setState({dispChoice})
   }
 

@@ -3,7 +3,7 @@ import './ApiCard.css'
 
 export default function ApiCard(props) {
     return (
-        <div className='api-card' onClick={() => props.click(props.api.id)}>
+        <div className='api-card' onClick={() => props.click('info', props.api)}>
             <div>
                 <span>{props.api.name}</span>
             </div>
