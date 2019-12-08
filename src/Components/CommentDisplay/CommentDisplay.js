@@ -37,10 +37,8 @@ export default class CommentDisplay extends Component {
 
         this.setState({text: ''})
 
-        // console.log(newComment)
         axios.post('/api/comments', newComment)
             .then(response => this.setState({comments: response.data}))
-            // .then(response => console.log(response.data))
             .catch(error => console.log('Comment new:', error))
     }
 
@@ -55,14 +53,13 @@ export default class CommentDisplay extends Component {
     }
 
     render() {
-        let filteredComments = this.state.comments.filter(v => v.apiID = this.props.apiID)
+        let filteredComments = this.state.comments.filter(v => v.apiID == this.props.apiID)
         return (
             <section id='comments'>
                 <div>
                     {filteredComments.map((v, i) => (<Comment key={v.id} 
                         comment={v.text} 
                         id={v.id} 
-                        //apiID={v.apiID}
                         delete={this.delete} 
                         edit={this.edit} />))}
                 </div>
