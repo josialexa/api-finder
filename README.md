@@ -1,3 +1,8 @@
+# NOTE:
+## To run both the React server and the Node server at the same time to view content, type `npm run both`
+### When you want to kill both servers, go to the command line and type `kill %2` then `kill %1`
+### Alternatively you can start them both separately the way you usually do
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
