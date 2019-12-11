@@ -1,29 +1,17 @@
 import React, {Component} from 'react'
-import axios from 'axios'
 import CategoryCard from '../CategoryCard/CategoryCard.js'
 import ApiCard from '../ApiCard/ApiCard.js'
 import './CardDisplay.css'
 
 export default class CardDisplay extends Component {
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
 
         this.state = {
-            apis: [],
-            categories: [],
-            filteredApis: []
+            apis: this.props.apis,
+            categories: Array.from(new Set(this.props.apis.map(v => v.category))),
+            filteredApis: this.props.apis
         }
-    }
-
-    componentDidMount() {
-        axios.get('/api/apis')
-            .then(response => {
-                this.setState({
-                        apis: response.data,
-                        categories: Array.from(new Set(response.data.map(v => v.category))),
-                        filteredApis: response.data
-                    })
-            })
     }
 
     openCategory = (category) => {

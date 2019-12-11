@@ -1,0 +1,14 @@
+.api-buttons {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.api-control {
+    width: 15%;
+    color: white;
+    background-color: rgb(100, 180, 220);
+    border-radius: 15px;
+    margin: 0px 5px 5px;
+}

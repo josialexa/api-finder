@@ -1,7 +1,3 @@
-//this needs to get comments for a specific api in the list and display them
-//also needs a form for adding new comments
-//also need to be able to delete and edit comments
-
 import React, {Component} from 'react'
 import Comment from '../Comment/Comment.js'
 import axios from 'axios'
@@ -64,7 +60,7 @@ export default class CommentDisplay extends Component {
                         edit={this.edit} />))}
                 </div>
                 <div id='new-comment'>
-                    <input value={this.state.text} onChange={this.handleChange} placeholder='Add a comment...' ></input>
+                    <input className='comment-input' value={this.state.text} onChange={this.handleChange} placeholder='Add a comment...' ></input>
                         <button onClick={this.new}>Post</button>
                     
                 </div>
