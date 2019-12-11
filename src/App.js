@@ -12,10 +12,11 @@ class App extends Component {
 
     this.state = {
       home: <Home />,
-      categories: <CardDisplay apiFlag={false} setDisplay={this.setDisplay} />,
-      search: <CardDisplay apiFlag={true} setDisplay={this.setDisplay} />,
+      categories: <CardDisplay apiFlag={false} setDisplay={this.setDisplay} clearCat={false} />,
+      search: <CardDisplay apiFlag={true} setDisplay={this.setDisplay} clearCat={false} />,
       info: <ApiDisplay api={{}} update={this.updateData} />,
-      dispChoice: 'home'
+      dispChoice: 'home',
+      clearCat: false
     }
   }
 
@@ -23,23 +24,23 @@ class App extends Component {
     axios.get('/api/apis')
     .then(response => {
       this.setState({
-        search: <CardDisplay apis={response.data} apiFlag={true} setDisplay={this.setDisplay} />,
-        categories: <CardDisplay apis={response.data} apiFlag={false} setDisplay={this.setDisplay} />
+        search: <CardDisplay apis={response.data} apiFlag={true} setDisplay={this.setDisplay} clearCat={this.props.clearCat} />,
+        categories: <CardDisplay apis={response.data} apiFlag={false} setDisplay={this.setDisplay} clearCat={this.props.clearCat} />
       })
     })
     .catch(error => console.log('Get APIs:', error))
   }
 
-  setDisplay = (dispChoice, api=null) => {
-    if(api) this.setState({info: <ApiDisplay api={api} update={this.update} />})
+  setDisplay = (dispChoice, clearCat, api=null) => {
+    this.setState({dispChoice, clearCat})
     
-    this.setState({dispChoice})
+    if(api) this.setState({info: <ApiDisplay api={api} update={this.update} />})
   }
 
   update = (apis) => {
     this.setState({
-      search: <CardDisplay apis={apis} apiFlag={true} setDisplay={this.setDisplay} />,
-      categories: <CardDisplay apis={apis} apiFlag={false} setDisplay={this.setDisplay} />,
+      search: <CardDisplay apis={apis} apiFlag={true} setDisplay={this.setDisplay} clearCat={this.props.clearCat} />,
+      categories: <CardDisplay apis={apis} apiFlag={false} setDisplay={this.setDisplay} clearCat={this.props.clearCat} />,
       dispChoice: 'search'
     })
   }

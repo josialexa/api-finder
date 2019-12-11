@@ -1,11 +1,33 @@
+#card-display-container {
+    height: 100%;
+    width: 100%;
+    margin-top: 12%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#search-display {
+    margin-top: 1%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#search-display input {
+    border: none;
+    border-radius: 15px;
+    padding: 5px;
+}
+
 #card-display {
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
     overflow-y: auto;
-    margin-top: 12vh;
     background-color: rgb(60, 60, 60);
-    height: 88vh;
+    height: 100%;
     width: 100%;
 }

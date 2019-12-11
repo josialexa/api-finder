@@ -66,6 +66,7 @@ export default class ApiDisplay extends Component {
 
 class ApiInfo extends Component {
     render() {
+        console.log(this.props.api)
         return (
             <div className='api-display'>
                 <div>

@@ -9,13 +9,13 @@ export default function Header(props) {
                 <img src={logo} alt='API Finder Logo' />
             </div>
             <div className='menu-items'>
-                <div className='menu-item' onClick={() => props.setDisplay('home')}>
+                <div className='menu-item' onClick={() => props.setDisplay('home', false)}>
                     <span>Home</span>
                 </div>
-                <div className='menu-item' onClick={() => props.setDisplay('categories')}>
+                <div className='menu-item' onClick={() => props.setDisplay('categories', false)}>
                     <span>Categories</span>
                 </div>
-                <div className='menu-item' onClick={() => props.setDisplay('search')}>
+                <div className='menu-item' onClick={() => props.setDisplay('search', true)}>
                     <span>Search</span>
                 </div>
             </div>
